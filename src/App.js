@@ -18,7 +18,7 @@ const App = () => {
   }, [])
   return (
     <div>
-      <ProgressBar color={'red'} width={'100%'} value={progress} max={100} />
+      <ProgressBar value={progress} max={100} />
     </div>
   )
 }
