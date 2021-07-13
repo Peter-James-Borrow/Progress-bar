@@ -1,29 +1,32 @@
-import {useState, useEffect} from 'react'
-import ProgressBar from "./components/ProgressBar";
+import { useState, useEffect } from "react"
+import ProgressBar from "./components/ProgressBar"
 
-
-function App() {
-  const [progress, setProgress ] = useState(0)
+const App = () => {
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((oldValue) => {
         const newValue = oldValue + 10;
 
-        if (newValue === 100) {
+        if(newValue === 100) {
           clearInterval(interval)
         }
         return newValue;
       })
-    },1000)
+    }, 1000);
   }, [])
   return (
+    <div>
+      <ProgressBar color={'red'} width={'100%'} value={progress} max={100} />
+    </div>
+  )
+}
+
+export default App
+
   
-   <ProgressBar color={'red'} width={'800px'} value={progress} max={100} />
+ 
   
    
     
- )
-}
-
-export default App;
