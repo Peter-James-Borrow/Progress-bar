@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import ProgressBar from "./components/ProgressBar"
 
+
 const App = () => {
   const [progress, setProgress] = useState(0)
 
@@ -19,6 +20,8 @@ const App = () => {
   return (
     <div>
       <ProgressBar value={progress} max={100} />
+      
+     
     </div>
   )
 }

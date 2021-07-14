@@ -2,10 +2,9 @@ import Styled from 'styled-components'
 
 const Container = Styled.div `
     progress {
-        margin: 8px;
-
+        margin-right: 10px;
     }
-
+    
     progress[value] {
         width: ${props => props.width};
         -webkit-appearance: none;
@@ -25,5 +24,9 @@ const Container = Styled.div `
     span {
         color: red;
     }
-`
-export default Container;
+    `
+    export default Container;
+
+
+      
+       

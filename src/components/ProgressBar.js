@@ -5,8 +5,8 @@ import Container from './ProgressStyles'
 const ProgressBar = ({value, max, color, width}) => {
     return (
         <Container color={color} width={width}>
-            <progress value={value} max={max} />
-            <span>{(value/max) *10.00}</span> 
+            <progress value={value} max={max}   />
+            <span>{(value/max) *10.00} of 10</span> 
         </Container>
     )
 }
@@ -21,7 +21,7 @@ ProgressBar.propTypes = {
 ProgressBar.defaultProps = {
     max: 100,
     width: '80%',
-    color: 'limegreen',
+    color: 'red',
     
 }
 
